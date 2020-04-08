@@ -1,0 +1,35 @@
+{
+    "name": "thiagocazzeri/laravel-pagseguro",
+    "description": "PagSeguro Checkout Transparente e Pagamento Recorrente(Assinaturas) no Laravel 7.*",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel", "pagseguro", "transparente", "recorrente", "assinaturas"],
+    "authors": [
+        {
+            "name": "Thiago C I Figueiredo",
+            "email": "thiagofiguer@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "tcazzeri\\PagSeguro\\": "src/tcazzeri/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "^7.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "tcazzeri\\PagSeguro\\PagSeguroServiceProvider"
+            ],
+            "aliases": {
+                "PagSeguro": "tcazzeri\\PagSeguro\\PagSeguroFacade",
+                "PagSeguroRecorrente": "tcazzeri\\PagSeguro\\PagSeguroRecorrenteFacade",
+                "PagSeguroBoleto": "tcazzeri\\PagSeguro\\PagSeguroBoletoFacade"
+            }
+        }
+    }
+}
